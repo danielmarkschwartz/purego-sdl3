@@ -1,4 +1,4 @@
-module github.com/jupiterrider/purego-sdl3
+module github.com/danielmarkschwartz/purego-sdl3
 
 go 1.18
 
