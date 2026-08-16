@@ -3,7 +3,7 @@ package main
 import (
 	"math"
 
-	"github.com/jupiterrider/purego-sdl3/sdl"
+	"github.com/danielmarkschwartz/purego-sdl3/sdl"
 )
 
 const (

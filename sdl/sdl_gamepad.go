@@ -3,7 +3,7 @@ package sdl
 import (
 	"unsafe"
 
-	"github.com/jupiterrider/purego-sdl3/internal/mem"
+	"github.com/danielmarkschwartz/purego-sdl3/internal/mem"
 )
 
 // [GamepadBindingType] defines the types of gamepad control bindings.

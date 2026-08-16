@@ -3,7 +3,7 @@ package sdl
 import (
 	"unsafe"
 
-	"github.com/jupiterrider/purego-sdl3/internal/convert"
+	"github.com/danielmarkschwartz/purego-sdl3/internal/convert"
 )
 
 // [MessageBoxColorType] is an enumeration of indices inside the colors array of [MessageBoxColorScheme].

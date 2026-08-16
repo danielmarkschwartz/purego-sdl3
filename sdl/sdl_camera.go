@@ -3,7 +3,7 @@ package sdl
 import (
 	"unsafe"
 
-	"github.com/jupiterrider/purego-sdl3/internal/mem"
+	"github.com/danielmarkschwartz/purego-sdl3/internal/mem"
 )
 
 // [CameraPosition] is a structure specifying the position of camera in relation to system devices.

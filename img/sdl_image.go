@@ -3,7 +3,7 @@ package img
 import (
 	"unsafe"
 
-	"github.com/jupiterrider/purego-sdl3/sdl"
+	"github.com/danielmarkschwartz/purego-sdl3/sdl"
 )
 
 // [Animation] defines the animated image support.

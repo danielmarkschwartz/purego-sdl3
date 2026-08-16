@@ -3,7 +3,7 @@ package sdl
 import (
 	"unsafe"
 
-	"github.com/jupiterrider/purego-sdl3/internal/mem"
+	"github.com/danielmarkschwartz/purego-sdl3/internal/mem"
 )
 
 // [Joystick] is a structure specifying the joystick structure used to identify an SDL joysticks.

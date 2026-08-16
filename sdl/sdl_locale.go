@@ -3,7 +3,7 @@ package sdl
 import (
 	"unsafe"
 
-	"github.com/jupiterrider/purego-sdl3/internal/convert"
+	"github.com/danielmarkschwartz/purego-sdl3/internal/convert"
 )
 
 // [Locale] is a struct to provide locale data.

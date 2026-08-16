@@ -4,7 +4,7 @@ import (
 	"unsafe"
 
 	"github.com/ebitengine/purego"
-	"github.com/jupiterrider/purego-sdl3/internal/convert"
+	"github.com/danielmarkschwartz/purego-sdl3/internal/convert"
 )
 
 // [HintPriority] is an enumeration of hint priorities.
