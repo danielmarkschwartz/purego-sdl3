@@ -1,6 +1,8 @@
 package ttf
 
 import (
+	"unsafe"
+
 	"github.com/danielmarkschwartz/purego-sdl3/internal/convert"
 	"github.com/danielmarkschwartz/purego-sdl3/sdl"
 )
@@ -648,8 +650,19 @@ func GetTextSubStringForPoint(text *Text, x int32, y int32, substring *SubString
 // [GetTextSubStringsForRange] gets the substrings of a text object that contain a range of text.
 //
 // [GetTextSubStringsForRange]: https://wiki.libsdl.org/SDL3_ttf/TTF_GetTextSubStringsForRange
-func GetTextSubStringsForRange(text *Text, offset int32, length int32, count *int32) {
-	ttfGetTextSubStringsForRange(text, offset, length, count)
+func GetTextSubStringsForRange(text *Text, offset int32, length int32) []SubString {
+	var count int32
+	substrs := ttfGetTextSubStringsForRange(text, offset, length, &count)
+	if substrs == nil || count <= 0 {
+		return nil
+	}
+
+	result := make([]SubString, count)
+	for i := int32(0); i < count; i++ {
+		result[i] = *(*SubString)(unsafe.Add(unsafe.Pointer(substrs), uintptr(i)*unsafe.Sizeof(SubString{})))
+	}
+
+	return result
 }
 
 // [GetTextWrapWidth] gets whether wrapping is enabled on a text object.
